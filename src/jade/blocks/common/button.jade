@@ -1,0 +1,18 @@
+mixin button(view, size, isLink, href)
+    if (!view)
+        - view = 'default'
+
+    if (!size)
+        - size = 's'
+
+    if (isLink)
+        a.button.button_type_link(class="button_view_" + view, class="button_size_" + size, href=href)&attributes(attributes)
+            span.button__in
+                block
+    else
+        button.button(class="button_view_" + view, class="button_size_" + size)&attributes(attributes)
+            span.button__in
+                block
+
+mixin button-text(text)
+    span.button__text=text

@@ -1,0 +1,72 @@
+.popup
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 9000
+    visibility: hidden
+    opacity: 0
+    transition: none
+    pointer-events: none
+
+    &_visible
+        visibility: visible
+        opacity: 1
+        transition: 200ms $timing-function
+        pointer-events: all
+
+    &_visible &__container
+        opacity: 1
+        visibility: visible
+
+        transform: translate3d(0, 0, 0)
+
+    &__container
+        background-color: #fff
+        padding: 20px
+        position: relative
+        z-index: 9200
+        box-shadow: 0 10px 20px rgba(#000, .4)
+        border-radius: 2px
+        transition: 400ms $timing-function
+        transition-delay: 200ms
+        transform: translate3d(0, 20px, 0)
+        opacity: 0
+        visibility: hidden
+        width: 600px
+
+    &__overlay
+        background-color: rgba(#282c36, .65)
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        position: absolute
+        z-index: 9100
+
+        &:hover + .popup__close
+            opacity: 1
+
+    &__close
+        align-items: center
+        justify-content: center
+        width: 48px
+        height: 48px
+        position: fixed
+        top: 20px
+        right: 40px
+        z-index: 9200
+        cursor: pointer
+        transition: 200ms $timing-function
+        display: none
+        opacity: .75
+
+        +bp(min, 1024px)
+            display: flex
+
+        &:hover
+            opacity: 1

@@ -1,0 +1,9 @@
+mixin input(size, required)
+    if (!size)
+        - size = 's'
+
+    .input(class="input_size_" + size)
+        if (required)
+            span.input__required(data-tooltip="Это поле нужно заполнить") *
+
+        input.input__control(type="text")&attributes(attributes)

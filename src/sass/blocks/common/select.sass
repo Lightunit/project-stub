@@ -1,0 +1,48 @@
+.select
+    position: relative
+
+    &:after
+        content: ''
+        background-image: svg('arrow_bottom', '[fill]: #4b606b')
+        width: 16px
+        height: 16px
+        position: absolute
+        right: 8px
+        top: 0
+        bottom: 0
+        margin: auto
+        pointer-events: none
+
+    &_size
+        &_s
+            .select__control
+                height: 34px
+                padding: 0 28px 0 8px
+
+        &_m
+            .select__control
+                height: 36px
+                padding: 0 28px 0 10px
+
+        &_l
+            .select__control
+                height: 38px
+                padding: 0 28px 0 12px
+
+    &__control
+        border: 1px solid #ccc
+        border-radius: 2px
+        min-width: 184px
+        width: 100%
+        font: inherit
+        font-size: 1.4rem
+        transition: 200ms $timing-function
+        color: $c-main
+        background-color: #fff
+        appearance: none
+
+        &:hover
+            border-color: #d1d8de
+
+        &:focus
+            border-color: #0f90fa

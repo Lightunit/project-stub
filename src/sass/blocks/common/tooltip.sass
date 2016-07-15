@@ -1,0 +1,40 @@
+[data-tooltip]
+    &:before, &:after
+        visibility: hidden
+        opacity: 0
+        transform: translate3d(0, -10px, 0)
+        transition: 200ms ease-out
+        position: absolute
+
+    &:before
+        content: attr(data-tooltip)
+        z-index: 10
+        right: -15px
+        bottom: 100%
+        min-width: 150px
+        border-radius: 2px
+        font-size: 1.2rem
+        line-height: 1.8rem
+        white-space: nowrap
+        pointer-events: none
+        color: #fff
+        background-color: rgba(#000, .8)
+        padding: 4px 10px
+
+    &:after
+        content: ''
+        width: 0
+        height: 0
+        border-style: solid
+        border-color: transparent
+        border-width: 10px 10px 0 10px
+        border-top-color: rgba(#000, .8)
+        top: 0
+        right: 6px
+
+    &:hover
+        &:before, &:after
+            visibility: visible
+            opacity: 1
+            transform: translate3d(0, 0, 0)
+            transition: 200ms ease-in

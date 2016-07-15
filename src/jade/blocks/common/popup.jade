@@ -1,0 +1,7 @@
+mixin popup(id)
+    .popup(role="dialog", data-popup-id=id)
+        .popup__container
+            block
+        .popup__overlay(data-popup-action="close")
+        .popup__close(data-popup-action="close")
+            +icon("close")

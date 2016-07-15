@@ -1,0 +1,23 @@
+mixin pagination(pages, active)
+    .pagination
+        .pagination__item.pagination__item_prev
+            span.button.button_disabled.button_view_pseudo.button_size_s
+                span.button__in
+                    span.button__text пред.
+
+        - for (var i = 1; i <= pages; i++)
+            if (i == active)
+                .pagination__item.pagination__item_active
+                    a.button.button_type_link.button_view_pseudo.button_size_s(href="#")
+                        span.button__in
+                            span.button__text= i
+            else
+                .pagination__item
+                    a.button.button_type_link.button_view_pseudo.button_size_s(href="#")
+                        span.button__in
+                            span.button__text= i
+
+        .pagination__item.pagination__item_next
+            a.button.button_type_link.button_view_pseudo.button_size_s(href="#")
+                span.button__in
+                    span.button__text след.

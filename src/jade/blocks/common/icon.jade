@@ -1,0 +1,5 @@
+mixin icon(namespace, iconName)
+    if (iconName)
+        i.icon(class="icon_" + namespace + "_" + iconName, aria-hidden="true")
+    else
+        i.icon(class="icon_" + namespace, aria-hidden="true")

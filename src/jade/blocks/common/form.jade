@@ -1,0 +1,18 @@
+mixin form
+    form.form
+        block
+
+mixin form-group
+    .form__group
+        block
+
+mixin form-field
+    .form__field
+        block
+
+mixin form-action
+    .form__actions
+        block
+
+mixin label(text, link)
+    label.form__label(for=link)=text

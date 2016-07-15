@@ -1,0 +1,33 @@
+.form
+
+    &__group
+        margin-bottom: 14px
+
+        +bp(min, 1024px)
+            display: flex
+            justify-content: space-between
+
+        .form__field
+            flex-basis: 48%
+
+            +bp(min, 1024px)
+                margin-bottom: 0
+
+    &__field
+        margin-bottom: 14px
+
+        &:last-child
+            margin-bottom: 0
+
+    &__label
+        font-size: 1.4rem
+        color: #8f9aa0
+        display: inline-block
+        margin-bottom: 4px
+
+    &__actions
+        display: flex
+        flex-direction: row-reverse
+
+        .button + .button
+            margin-right: 4%

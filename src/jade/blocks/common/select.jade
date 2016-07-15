@@ -1,0 +1,7 @@
+mixin select(size)
+    if (!size)
+        - size = 's'
+
+    .select(class="select_size_" + size)
+        select.select__control&attributes(attributes)
+            block

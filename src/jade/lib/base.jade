@@ -1,0 +1,22 @@
+include mixins
+include ../blocks/common/index
+
+doctype
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+        meta(name="format-detection", content="telephone=no")
+        +seo("description content", "some keywords")
+        block title
+            title Boilerplate
+        +css(["bundle.min.css"])
+    body.page
+        .main
+            block content
+
+        block popup
+
+        block scripts
+            script(src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+            +js(["bundle.min.js"])

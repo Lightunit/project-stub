@@ -1,0 +1,64 @@
+.input
+    position: relative
+
+    &_size
+        &_s
+            .input__control
+                height: 34px
+                padding: 0 8px
+
+        &_m
+            .input__control
+                height: 36px
+                padding: 0 10px
+
+        &_l
+            .input__control
+                height: 38px
+                padding: 0 12px
+
+    &__required
+        color: #f33535
+        font-size: 1.8rem
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        width: 20px
+        line-height: 40px
+        user-select: none
+        cursor: help
+
+        & + .input__control
+            padding-right: 28px
+
+    &__control
+        border: 1px solid #ccc
+        border-radius: 2px
+        min-width: 184px
+        width: 100%
+        font: inherit
+        font-size: 1.4rem
+        transition: 200ms $timing-function
+        color: $c-main
+        background-color: #fff
+        appearance: none
+
+        &::placeholder
+            color: lighten(#8f9aa0, 10)
+
+        &:focus
+            border-color: #0f90fa
+
+        &_error
+            border-color: #f33535
+
+    &__error-text
+        color: #f33535
+        font-size: 1.2rem
+        padding: 0 4px
+        background-color: #fff
+        position: absolute
+        right: 5px
+        bottom: -9px
+        user-select: none

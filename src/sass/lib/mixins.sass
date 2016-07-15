@@ -1,0 +1,41 @@
+=lh($font-size)
+    line-height: ($font-size / 2) + $font-size
+
+=arr($width, $height, $bg, $d)
+    width: 0
+    height: 0
+    border-style: solid
+    border-color: transparent
+
+    @if $d == t
+        border-width: 0 $width $height $width
+        border-color: transparent
+        border-bottom-color: $bg
+   
+    @if $d == r
+        border-width: $height 0 $height $width
+        border-left-color: $bg
+
+    @if $d == b
+        border-width: $height $width 0 $width
+        border-top-color: $bg
+
+    @if $d == l
+        border-width: $height $width $height 0
+        border-right-color: $bg
+
+    @if $d == tl
+        border-width: $height $width 0 0
+        border-top-color: $bg
+
+    @if $d == tr
+        border-width: 0 $width $height 0
+        border-right-color: $bg
+
+    @if $d == bl
+        border-width: $width 0 0 $height
+        border-left-color: $bg
+
+    @if $d == br
+        border-width: 0 0 $height $width
+        border-bottom-color: $bg

@@ -1,0 +1,6 @@
+.DS_Store
+.gulp
+.idea
+*.log
+node_modules
+public

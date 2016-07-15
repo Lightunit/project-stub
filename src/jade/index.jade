@@ -1,0 +1,45 @@
+extend lib/base
+
+block title
+    title Главная | Company
+
+block content
+    .content
+        .content__in
+            h1 Hello world!
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, alias!
+            h2 Lorem ipsum.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit blanditiis neque voluptatibus, perspiciatis a voluptatem.
+            ul
+                li Lorem ipsum dolor sit.
+                li Lorem ipsum dolor sit.
+                li Lorem ipsum dolor sit.
+                li Lorem ipsum dolor sit.
+                li Lorem ipsum dolor sit.
+            +pagination(5, 1)
+            +button("action", "l")(data-popup-action="b5c1cc099f0")
+                +button-text("Call popup")
+            +scroll-top
+
+block popup
+    +popup("b5c1cc099f0")
+        +form
+            +form-group
+                +form-field
+                    +label("Ваше имя", "username")
+                    +input("s", "required")(id="username", placeholder="Петр")
+                +form-field
+                    +label("Телефон", "phonenumber")
+                    +input("s", "required")(id="phonenumber", placeholder="+7 (000) 000-00-00")
+            +form-field
+                +label("Тариф", "tariff")
+                +select(id="tariff")
+                    option Value 1
+                    option Value 1
+                    option Value 1
+                    option Value 1
+            +form-action
+                +button("action", "s")
+                    +button-text("Callback now!")
+                +button("plain", "s")(data-popup-action="close")
+                    +button-text("Cancel")

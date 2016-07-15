@@ -1,0 +1,66 @@
+.button
+    border: none
+    cursor: pointer
+    min-width: 184px
+    display: inline-block
+    user-select: none
+    transition: 200ms $timing-function
+    font-size: 1.4rem
+    border-radius: 2px
+
+    &__in
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &_type_link
+        text-decoration: none
+
+    &_disabled
+        cursor: default
+        opacity: .25
+        pointer-events: none
+
+    &_size
+        &_s
+            height: 34px
+            padding: 0 15px
+
+        &_m
+            height: 36px
+            padding: 0 17px
+
+        &_l
+            height: 38px
+            padding: 0 19px
+
+    &_view
+        &_default
+            background-color: #0f90fa
+            color: #fff
+
+            &:hover
+                background-color: darken(#0f90fa, 5)
+
+            &:focus
+                background-color: lighten(#0f90fa, 5)
+
+        &_plain
+            background-color: transparent
+            color: $c-main
+
+        &_pseudo
+            border: 1px solid #ccc
+            color: $c-main
+            background-color: transparent
+
+        &_action
+            background-color: #f33535
+            color: #fff
+
+            &:hover
+                background-color: darken(#f33535, 5)
+
+            &:focus
+                background-color: lighten(#f33535, 5)
